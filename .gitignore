@@ -1,0 +1,4 @@
+.*
+*.pyc
+*.log
+web2py/applications/Scrum_Web_Application/sessions/
