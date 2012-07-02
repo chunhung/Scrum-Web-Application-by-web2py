@@ -90,9 +90,9 @@ db.define_table('backlog',
     Field('estimation', 'integer'),
     Field('note', 'text'),
     Field('demo', 'text'),
-    Field('category', default='story'),
-    Field('product_id', db.product),
-    Field('created_on', 'datetime', default=request.now))
+    Field('category', default='story', writable=False),
+    Field('product_id', db.product, writable=False),
+    Field('created_on', 'datetime', default=request.now, writable=False, readable=False))
 
 db.define_table('task',
     Field('title'),
